@@ -1,0 +1,666 @@
+/* Galeri */
+
+#galeri {
+    text-align: center;
+    padding: 3rem 1rem;
+    background-color: #f9f9f9;
+}
+
+#galeri h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #333;
+}
+
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    justify-items: center;
+}
+
+.gallery-item {
+    width: 100%;
+    max-width: 350px;
+    /* Menetapkan lebar maksimum untuk gambar agar ukuran konsisten */
+    height: 250px;
+    /* Menetapkan tinggi gambar yang konsisten */
+    overflow: hidden;
+    /* Menyembunyikan bagian gambar yang meluap */
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Memastikan gambar memenuhi area dengan proporsi yang sesuai */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.gallery-item img:hover {
+    transform: scale(1.1);
+}
+
+
+/* Header */
+
+header {
+    background-color: #0288d1;
+    padding: 1rem 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 2rem;
+}
+
+nav ul li a {
+    color: white;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+}
+
+
+/* Styling untuk logo */
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+.logo img {
+    max-width: 100%;
+    height: auto;
+    width: 150px;
+    /* Ukuran default logo */
+    transition: transform 0.3s ease;
+}
+
+
+/* Efek hover untuk logo */
+
+.logo img:hover {
+    transform: scale(1.1);
+}
+
+
+/* Responsif: Ukuran logo berkurang pada layar kecil */
+
+@media (max-width: 768px) {
+    .logo img {
+        width: 120px;
+        /* Ukuran logo lebih kecil di layar kecil */
+    }
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1rem;
+    }
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+    }
+    nav ul li {
+        margin-left: 0;
+        margin-bottom: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo img {
+        width: 100px;
+        /* Logo lebih kecil di perangkat mobile */
+    }
+}
+
+
+/* Slider */
+
+.slider {
+    position: relative;
+    height: 100vh;
+    background-color: #015b12;
+}
+
+.slider-container {
+    display: flex;
+    overflow: hidden;
+    height: 100%;
+}
+
+.slide {
+    min-width: 100%;
+    position: relative;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* Overlay */
+
+.overlay {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    text-align: center;
+    width: 100%;
+}
+
+.overlay h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: #050605;
+}
+
+.overlay p {
+    font-size: 1.2rem;
+    color: #060706;
+}
+
+
+/* Program Section */
+
+#program {
+    background-color: #f9f9f9;
+    padding: 3rem 1rem;
+    text-align: center;
+}
+
+#program h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #333;
+}
+
+.program-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.program-card {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 2rem;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.program-card h3 {
+    font-size: 1.5rem;
+    color: #222;
+    margin-bottom: 1rem;
+}
+
+.program-card p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 1rem;
+}
+
+.program-card .btn {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+}
+
+.program-card img.program-brosur {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 1rem;
+}
+
+.program-card:hover {
+    transform: translateY(-10px);
+}
+
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+    .program-card {
+        width: 90%;
+    }
+}
+
+
+/* Responsif: Program Umrah */
+
+@media (max-width: 768px) {
+    .program-card {
+        width: 45%;
+    }
+}
+
+@media (max-width: 480px) {
+    .program-card {
+        width: 100%;
+        /* Membuat card memenuhi layar pada perangkat mobile */
+    }
+}
+
+
+/* Tentang Kami */
+
+#about {
+    text-align: center;
+    padding: 4rem 2rem;
+    background-color: #f9f9f9;
+}
+
+#about h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+#about p {
+    font-size: 1.1rem;
+    color: #555;
+    max-width: 800px;
+    margin: 0 auto 2rem;
+    line-height: 1.6;
+}
+
+
+/* Struktur Divisi */
+
+.team-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.team-member {
+    text-align: center;
+    max-width: 250px;
+}
+
+.team-member img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    /* Memastikan gambar menyesuaikan ukuran tanpa distorsi */
+    border-radius: 50%;
+    box-shadow: none;
+    /* Menghapus bayangan jika tidak diperlukan */
+    transition: transform 0.3s ease-in-out;
+}
+
+.team-member img:hover {
+    transform: scale(1.1);
+}
+
+.team-member h4 {
+    font-size: 1.2rem;
+    color: #222;
+    margin-top: 1rem;
+}
+
+.team-member p {
+    font-size: 1rem;
+    color: #777;
+}
+
+
+/* Responsif */
+
+@media (max-width: 768px) {
+    .team-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
+/*Testimoni*/
+
+#testimonials {
+    background-color: #f9f9f9;
+    padding: 3rem 1rem;
+    text-align: center;
+}
+
+#testimonials h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #333;
+}
+
+.testimonial-slider {
+    display: flex;
+    overflow-x: auto;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.testimonial {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 2rem;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+}
+
+.testimonial-text {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 1rem;
+}
+
+.testimonial-author {
+    font-size: 1rem;
+    color: #777;
+}
+
+.testimonial:hover {
+    transform: translateY(-10px);
+}
+
+@media (max-width: 768px) {
+    .testimonial {
+        width: 90%;
+    }
+}
+
+
+/* Footer */
+
+footer {
+    background-color: #0288d1;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+footer .social-links a {
+    margin: 0 1rem;
+    color: white;
+    font-size: 1.2rem;
+}
+
+footer .social-links a:hover {
+    color: #f4f7f8;
+}
+
+footer .social-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+    gap: 1rem;
+}
+
+footer .social-links a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+}
+
+footer .social-links a img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    /* Bisa diubah jika ingin ikon lebih bulat */
+    transition: transform 0.3s ease-in-out;
+}
+
+footer .social-links a img:hover {
+    transform: scale(1.2);
+}
+
+footer .social-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+    gap: 1rem;
+}
+
+footer .social-links a {
+    display: inline-block;
+    width: 40px;
+    /* Ukuran tetap untuk ikon */
+    height: 40px;
+}
+
+footer .social-links a img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    /* Memastikan logo tetap proporsional */
+    border-radius: 5px;
+    /* Bisa dihapus jika tidak ingin sudut membulat */
+    transition: transform 0.3s ease-in-out;
+}
+
+footer .social-links a img:hover {
+    transform: scale(1.2);
+}
+
+
+/* Responsif: Footer */
+
+@media (max-width: 768px) {
+    footer .social-links {
+        flex-wrap: wrap;
+    }
+    footer .social-links a {
+        margin: 0.5rem;
+    }
+}
+
+
+/* Kontak Kami */
+
+#kontak {
+    padding: 4rem 1rem;
+    background-color: #0288d1;
+    color: white;
+    text-align: center;
+}
+
+#kontak h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.input-group {
+    width: 100%;
+    margin-bottom: 1.5rem;
+}
+
+.input-group label {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    display: block;
+    text-align: left;
+}
+
+.input-group input,
+.input-group textarea {
+    width: 100%;
+    padding: 0.8rem;
+    font-size: 1rem;
+    border-radius: 4px;
+    border: none;
+    margin-top: 0.5rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+textarea {
+    resize: vertical;
+}
+
+.btn-submit {
+    background-color: #0d0e0e;
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease;
+}
+
+.btn-submit:hover {
+    background-color: #0288d1;
+}
+
+@media (max-width: 768px) {
+    #kontak {
+        padding: 3rem 1rem;
+    }
+    .input-group input,
+    .input-group textarea {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    #kontak h2 {
+        font-size: 2rem;
+    }
+}
+
+
+/* Kontak Kami */
+
+#contact {
+    padding: 4rem 1rem;
+    background-color: #0288d1;
+    color: white;
+    text-align: center;
+}
+
+#contact h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.input-group {
+    width: 100%;
+    margin-bottom: 1.5rem;
+}
+
+.input-group label {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    display: block;
+    text-align: left;
+    color: #333;
+}
+
+.input-group input,
+.input-group select,
+.input-group textarea {
+    width: 100%;
+    padding: 0.8rem;
+    font-size: 1rem;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    margin-top: 0.5rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s ease;
+}
+
+.input-group input:focus,
+.input-group select:focus,
+.input-group textarea:focus {
+    border-color: #0288d1;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.btn-submit {
+    background-color: #0d0e0e;
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease;
+    margin-top: 1rem;
+}
+
+.btn-submit:hover {
+    background-color: #0288d1;
+}
+
+
+/* Responsif: Contact Form */
+
+@media (max-width: 768px) {
+    #contact {
+        padding: 3rem 1rem;
+    }
+    .input-group input,
+    .input-group select,
+    .input-group textarea {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    #contact h2 {
+        font-size: 2rem;
+    }
+}
