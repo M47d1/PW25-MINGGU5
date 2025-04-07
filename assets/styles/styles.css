@@ -1,50 +1,4 @@
-/* Galeri */
-
-#galeri {
-    text-align: center;
-    padding: 3rem 1rem;
-    background-color: #f9f9f9;
-}
-
-#galeri h2 {
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
-    color: #333;
-}
-
-.gallery-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1rem;
-    justify-items: center;
-}
-
-.gallery-item {
-    width: 100%;
-    max-width: 350px;
-    /* Menetapkan lebar maksimum untuk gambar agar ukuran konsisten */
-    height: 250px;
-    /* Menetapkan tinggi gambar yang konsisten */
-    overflow: hidden;
-    /* Menyembunyikan bagian gambar yang meluap */
-}
-
-.gallery-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    /* Memastikan gambar memenuhi area dengan proporsi yang sesuai */
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-}
-
-.gallery-item img:hover {
-    transform: scale(1.1);
-}
-
-
-/* Header */
+/* ======= HEADER ======= */
 
 header {
     background-color: #0288d1;
@@ -74,7 +28,7 @@ nav ul li a {
 }
 
 
-/* Styling untuk logo */
+/* ======= LOGO ======= */
 
 .logo {
     display: flex;
@@ -84,27 +38,22 @@ nav ul li a {
 }
 
 .logo img {
+    width: 150px;
     max-width: 100%;
     height: auto;
-    width: 150px;
-    /* Ukuran default logo */
     transition: transform 0.3s ease;
 }
-
-
-/* Efek hover untuk logo */
 
 .logo img:hover {
     transform: scale(1.1);
 }
 
 
-/* Responsif: Ukuran logo berkurang pada layar kecil */
+/* ======= RESPONSIVE HEADER ======= */
 
 @media (max-width: 768px) {
     .logo img {
         width: 120px;
-        /* Ukuran logo lebih kecil di layar kecil */
     }
     nav {
         flex-direction: column;
@@ -124,12 +73,11 @@ nav ul li a {
 @media (max-width: 480px) {
     .logo img {
         width: 100px;
-        /* Logo lebih kecil di perangkat mobile */
     }
 }
 
 
-/* Slider */
+/* ======= SLIDER ======= */
 
 .slider {
     position: relative;
@@ -155,7 +103,7 @@ nav ul li a {
 }
 
 
-/* Overlay */
+/* ======= OVERLAY ======= */
 
 .overlay {
     position: absolute;
@@ -179,7 +127,49 @@ nav ul li a {
 }
 
 
-/* Program Section */
+/* ======= GALERI ======= */
+
+#galeri {
+    text-align: center;
+    padding: 3rem 1rem;
+    background-color: #f9f9f9;
+}
+
+#galeri h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #333;
+}
+
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    justify-items: center;
+}
+
+.gallery-item {
+    width: 100%;
+    max-width: 350px;
+    height: 250px;
+    overflow: hidden;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.gallery-item img:hover {
+    transform: scale(1.1);
+}
+
+
+/* ======= PROGRAM ======= */
 
 #program {
     background-color: #f9f9f9;
@@ -244,16 +234,7 @@ nav ul li a {
 }
 
 
-/* Responsive Design */
-
-@media (max-width: 768px) {
-    .program-card {
-        width: 90%;
-    }
-}
-
-
-/* Responsif: Program Umrah */
+/* RESPONSIF PROGRAM */
 
 @media (max-width: 768px) {
     .program-card {
@@ -264,12 +245,11 @@ nav ul li a {
 @media (max-width: 480px) {
     .program-card {
         width: 100%;
-        /* Membuat card memenuhi layar pada perangkat mobile */
     }
 }
 
 
-/* Tentang Kami */
+/* ======= ABOUT ======= */
 
 #about {
     text-align: center;
@@ -292,7 +272,7 @@ nav ul li a {
 }
 
 
-/* Struktur Divisi */
+/* TEAM */
 
 .team-container {
     display: flex;
@@ -311,10 +291,7 @@ nav ul li a {
     width: 180px;
     height: 180px;
     object-fit: cover;
-    /* Memastikan gambar menyesuaikan ukuran tanpa distorsi */
     border-radius: 50%;
-    box-shadow: none;
-    /* Menghapus bayangan jika tidak diperlukan */
     transition: transform 0.3s ease-in-out;
 }
 
@@ -333,9 +310,6 @@ nav ul li a {
     color: #777;
 }
 
-
-/* Responsif */
-
 @media (max-width: 768px) {
     .team-container {
         flex-direction: column;
@@ -344,7 +318,7 @@ nav ul li a {
 }
 
 
-/*Testimoni*/
+/* ======= TESTIMONI ======= */
 
 #testimonials {
     background-color: #f9f9f9;
@@ -398,7 +372,7 @@ nav ul li a {
 }
 
 
-/* Footer */
+/* ======= FOOTER ======= */
 
 footer {
     background-color: #0288d1;
@@ -408,64 +382,27 @@ footer {
     margin-top: 2rem;
 }
 
-footer .social-links a {
-    margin: 0 1rem;
-    color: white;
-    font-size: 1.2rem;
-}
-
-footer .social-links a:hover {
-    color: #f4f7f8;
-}
-
 footer .social-links {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 1rem;
     gap: 1rem;
+    flex-wrap: wrap;
 }
 
 footer .social-links a {
     display: inline-block;
     width: 40px;
     height: 40px;
-}
-
-footer .social-links a img {
-    width: 100%;
-    height: auto;
-    border-radius: 5px;
-    /* Bisa diubah jika ingin ikon lebih bulat */
-    transition: transform 0.3s ease-in-out;
-}
-
-footer .social-links a img:hover {
-    transform: scale(1.2);
-}
-
-footer .social-links {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 1rem;
-    gap: 1rem;
-}
-
-footer .social-links a {
-    display: inline-block;
-    width: 40px;
-    /* Ukuran tetap untuk ikon */
-    height: 40px;
+    margin: 0.5rem;
 }
 
 footer .social-links a img {
     width: 100%;
     height: 100%;
     object-fit: contain;
-    /* Memastikan logo tetap proporsional */
     border-radius: 5px;
-    /* Bisa dihapus jika tidak ingin sudut membulat */
     transition: transform 0.3s ease-in-out;
 }
 
@@ -474,19 +411,46 @@ footer .social-links a img:hover {
 }
 
 
-/* Responsif: Footer */
+/* ======= TABEL JADWAL ======= */
 
-@media (max-width: 768px) {
-    footer .social-links {
-        flex-wrap: wrap;
-    }
-    footer .social-links a {
-        margin: 0.5rem;
-    }
+.table-container {
+    width: 90%;
+    margin: auto;
+    overflow-x: auto;
+    margin-bottom: 40px;
+}
+
+#jadwal h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #333;
+    text-align: center;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table th,
+table td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+}
+
+table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+    text-align: center;
+}
+
+table tr:nth-child(even) {
+    background-color: #f9f9f9;
 }
 
 
-/* Kontak Kami */
+/* ======= KONTAK KAMI ======= */
 
 #kontak {
     padding: 4rem 1rem;
@@ -504,163 +468,31 @@ form {
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 1rem;
     max-width: 600px;
-    margin: 0 auto;
+    margin: auto;
 }
 
-.input-group {
-    width: 100%;
-    margin-bottom: 1.5rem;
-}
-
-.input-group label {
-    font-size: 1.1rem;
-    margin-bottom: 0.5rem;
-    display: block;
-    text-align: left;
-}
-
-.input-group input,
-.input-group textarea {
+form input,
+form textarea {
     width: 100%;
     padding: 0.8rem;
+    border: none;
+    border-radius: 5px;
     font-size: 1rem;
-    border-radius: 4px;
-    border: none;
-    margin-top: 0.5rem;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-textarea {
-    resize: vertical;
-}
-
-.btn-submit {
-    background-color: #0d0e0e;
-    color: white;
-    padding: 1rem 2rem;
-    border-radius: 4px;
+form button {
+    padding: 0.8rem 1.5rem;
+    background-color: white;
+    color: #0288d1;
     border: none;
+    font-weight: bold;
+    border-radius: 5px;
     cursor: pointer;
-    font-size: 1.1rem;
     transition: background-color 0.3s ease;
 }
 
-.btn-submit:hover {
-    background-color: #0288d1;
-}
-
-@media (max-width: 768px) {
-    #kontak {
-        padding: 3rem 1rem;
-    }
-    .input-group input,
-    .input-group textarea {
-        width: 100%;
-    }
-}
-
-@media (max-width: 480px) {
-    #kontak h2 {
-        font-size: 2rem;
-    }
-}
-
-
-/* Kontak Kami */
-
-#contact {
-    padding: 4rem 1rem;
-    background-color: #0288d1;
-    color: white;
-    text-align: center;
-}
-
-#contact h2 {
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
-}
-
-.contact-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    max-width: 600px;
-    margin: 0 auto;
-    background-color: #fff;
-    padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.input-group {
-    width: 100%;
-    margin-bottom: 1.5rem;
-}
-
-.input-group label {
-    font-size: 1.1rem;
-    margin-bottom: 0.5rem;
-    display: block;
-    text-align: left;
-    color: #333;
-}
-
-.input-group input,
-.input-group select,
-.input-group textarea {
-    width: 100%;
-    padding: 0.8rem;
-    font-size: 1rem;
-    border-radius: 4px;
-    border: 1px solid #ccc;
-    margin-top: 0.5rem;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    transition: border-color 0.3s ease;
-}
-
-.input-group input:focus,
-.input-group select:focus,
-.input-group textarea:focus {
-    border-color: #0288d1;
-}
-
-textarea {
-    resize: vertical;
-}
-
-.btn-submit {
-    background-color: #0d0e0e;
-    color: white;
-    padding: 1rem 2rem;
-    border-radius: 4px;
-    border: none;
-    cursor: pointer;
-    font-size: 1.1rem;
-    transition: background-color 0.3s ease;
-    margin-top: 1rem;
-}
-
-.btn-submit:hover {
-    background-color: #0288d1;
-}
-
-
-/* Responsif: Contact Form */
-
-@media (max-width: 768px) {
-    #contact {
-        padding: 3rem 1rem;
-    }
-    .input-group input,
-    .input-group select,
-    .input-group textarea {
-        width: 100%;
-    }
-}
-
-@media (max-width: 480px) {
-    #contact h2 {
-        font-size: 2rem;
-    }
+form button:hover {
+    background-color: #f4f7f8;
 }
